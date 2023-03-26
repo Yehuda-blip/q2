@@ -170,7 +170,8 @@ public class BigIntTest {
 
     static String[][] minusTestsSimple = {
             //  { value, add, result }
-
+            // since the backbone of this is the same
+            // as plus, less testing was added
             { "0", "0", "0"},
             { "0", "1", "-1"},
             { "1", "0", "1"},
@@ -331,6 +332,8 @@ public class BigIntTest {
     };
 
     static void divideTests() throws Exception {
+        // in the case of division, single digit numbers
+        // are not straightforward, so they are also tested
         for (int i = 0; i < 999; i++) {
             BigInt I = new BigInt(Integer.toString(i));
             for (int j = 1; j < 99; j++) {
@@ -383,6 +386,9 @@ public class BigIntTest {
             System.out.println("side effects test " + i + ":");
             String[] test = sideEffectsTest[i];
             BigInt val = new BigInt(test[0]);
+
+            // two rounds mostly to make sure the division
+            // is also trusty
             for (int j = 1; j <= 2; j++) {
                 System.out.print(" Round " + j + " - ");
                 BigInt addExpect = new BigInt(test[1]);
