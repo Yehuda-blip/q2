@@ -35,8 +35,8 @@ public class BigInt implements Comparable<BigInt> {
     // for returning values, ZERO and ONE should be
     // deep-copied to avoid changes to static variables
     // outside of this class
-    static BigInt ZERO = new BigInt("0");
-    static BigInt ONE = new BigInt("1");
+    static final BigInt ZERO = new BigInt("0");
+    static final BigInt ONE = new BigInt("1");
     ArrayList<Integer> digits = new ArrayList<Integer>();
     int sign = 1;
 

@@ -54,7 +54,7 @@ public class BigIntTest {
         for (int i = 0; i < constructorTests.length; i++) {
             System.out.print("constructor test " + i + ": ");
             String[] test = constructorTests[i];
-            if (test[1] == FAIL) {
+            if (test[1].equals(FAIL)) {
                 boolean failed = false;
                 try {
                     new BigInt(test[0]);
